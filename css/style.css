@@ -286,25 +286,42 @@ a { color: var(--maroon); }
   color: var(--ink);
 }
 
-/* --- expositie + opening ------------------------------------ */
-.expo {
+/* --- lopende tentoonstellingen ------------------------------ */
+/* Card with a second, inset hairline frame — the museum wall-label look. */
+.expo-card {
+  max-width: 780px;
+  margin-inline: auto;
+  background: rgba(255, 247, 238, .72);
+  border: 1px solid rgba(186, 121, 53, .35);
+  border-radius: 4px;
+  padding: clamp(.7rem, 2.6vw, 1.1rem);
+  box-shadow: 0 10px 28px rgba(102, 11, 29, .07);
+}
+
+.expo-card__inset {
+  border: 1px solid rgba(186, 121, 53, .3);
+  border-radius: 2px;
+  padding: clamp(1.6rem, 6vw, 2.8rem) clamp(1.2rem, 5vw, 2.6rem);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(1.4rem, 5vw, 2.5rem);
+  gap: clamp(1.4rem, 5vw, 2.2rem);
   text-align: center;
-  position: relative;
 }
 
 @media (min-width: 720px) {
-  .expo { flex-direction: row; justify-content: center; gap: 3.5rem; }
+  .expo-card__inset {
+    flex-direction: row;
+    justify-content: center;
+    gap: clamp(2rem, 5vw, 3.5rem);
+  }
 }
 
 .expo__kicker {
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--maroon);
-  font-size: clamp(2rem, 9vw, 3.6rem);
+  font-size: clamp(1.7rem, 7vw, 2.6rem);
   letter-spacing: .06em;
   margin: 0;
   line-height: 1;
@@ -322,12 +339,20 @@ a { color: var(--maroon); }
 .expo__range {
   font-family: var(--font-display);
   color: var(--maroon);
-  font-size: clamp(1.3rem, 6vw, 2.25rem);
-  line-height: 1.25;
-  margin: .6rem 0 0;
+  font-size: clamp(1.15rem, 5vw, 1.9rem);
+  line-height: 1.3;
+  margin: .7rem 0 0;
   letter-spacing: .02em;
 }
 .expo__tm { font-size: .6em; color: var(--gold); }
+
+.expo__where {
+  margin: .9rem 0 0;
+  font-size: .74rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
 
 .opening {
   width: clamp(190px, 58vw, 250px);
