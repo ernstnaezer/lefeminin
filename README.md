@@ -71,7 +71,7 @@ kunstenaars staan nog op `href="#"`.
   aan. De kaarten tonen liggende uitsnedes op mobiel (3:4) en staande op
   desktop (346:565); `object-fit: cover` doet de rest, dus elk formaat werkt.
 - Kleuren staan bovenaan `css/style.css` in `:root` (maroon `#660B1D`,
-  goud `#BA7935`, teal `#244E4D`, crème `#FDEBDD` — overgenomen uit de flyer).
+  goud `#BA7935`, teal `#244E4D`, crème `#FCECDD` — overgenomen uit de flyer).
 
 ## Publiceren
 
