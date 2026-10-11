@@ -311,7 +311,9 @@ a { color: var(--maroon); }
   gap: clamp(1.4rem, 5vw, 2.2rem);
 }
 
-@media (min-width: 720px) {
+/* Pas naast elkaar als de titelkolom breed genoeg is om de naam op één regel
+   te houden; daaronder blijft de kaart gestapeld. */
+@media (min-width: 860px) {
   .expo-card__head {
     flex-direction: row;
     justify-content: center;
@@ -327,6 +329,7 @@ a { color: var(--maroon); }
   letter-spacing: .06em;
   margin: 0;
   line-height: 1;
+  white-space: nowrap;
 }
 .expo__kicker::before,
 .expo__kicker::after {
@@ -355,9 +358,15 @@ a { color: var(--maroon); }
   border-top: 1px solid rgba(186, 121, 53, .3);
 }
 
+/* De cirkel krijgt een expliciete hoogte in plaats van `aspect-ratio`: WebKit
+   leidt een aspect-ratio niet betrouwbaar af voor een flex-item, waardoor de
+   cirkel op sommige iPhones tot een platte ovaal inzakte. `flex: none` houdt
+   hem bovendien rond als de rij krap wordt. */
 .opening {
-  width: clamp(190px, 58vw, 250px);
-  aspect-ratio: 1;
+  --disc: clamp(190px, 58vw, 250px);
+  width: var(--disc);
+  height: var(--disc);
+  flex: none;
   border-radius: 50%;
   background: radial-gradient(circle at 35% 25%, var(--maroon-soft), var(--maroon) 75%);
   color: var(--cream);
