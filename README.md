@@ -61,9 +61,10 @@ Externe links openen in hetzelfde tabblad; wil je een nieuw tabblad, voeg dan
 Een knop die je niet nodig hebt: verwijder het hele `<a>…</a>` blok — zo
 heeft Fi alleen een websiteknop.
 
-Al ingevuld: Fi (<https://finaezer.nl/>) en De Speciaalzaak onder **Locatie**
-(<https://www.speciaalzaakvoorburg.nl>). Nog op `href="#"` staan de vier
-knoppen van Lya en Ilonka.
+Al ingevuld: Fi (<https://finaezer.nl/>) en De Speciaalzaak
+(<https://www.speciaalzaakvoorburg.nl>), in de kaart onder **Lopende
+tentoonstellingen**. Nog op `href="#"` staan de vier knoppen van Lya en
+Ilonka.
 
 ## Tekst of foto's wijzigen
 

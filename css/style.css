@@ -302,15 +302,19 @@ a { color: var(--maroon); }
   border: 1px solid rgba(186, 121, 53, .3);
   border-radius: 2px;
   padding: clamp(1.6rem, 6vw, 2.8rem) clamp(1.2rem, 5vw, 2.6rem);
+  text-align: center;
+}
+
+/* titel + data naast de openingscirkel */
+.expo-card__head {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: clamp(1.4rem, 5vw, 2.2rem);
-  text-align: center;
 }
 
 @media (min-width: 720px) {
-  .expo-card__inset {
+  .expo-card__head {
     flex-direction: row;
     justify-content: center;
     gap: clamp(2rem, 5vw, 3.5rem);
@@ -346,12 +350,11 @@ a { color: var(--maroon); }
 }
 .expo__tm { font-size: .6em; color: var(--gold); }
 
-.expo__where {
-  margin: .9rem 0 0;
-  font-size: .74rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--teal);
+/* locatie: hoort bij de tentoonstelling, dus binnen dezelfde kaart */
+.venue {
+  margin-top: clamp(1.6rem, 5vw, 2.4rem);
+  padding-top: clamp(1.5rem, 5vw, 2.2rem);
+  border-top: 1px solid rgba(186, 121, 53, .3);
 }
 
 .opening {
@@ -390,9 +393,6 @@ a { color: var(--maroon); }
   height: 1.9rem;
   color: var(--gold-light);
 }
-
-/* --- venue --------------------------------------------------- */
-.venue { text-align: center; position: relative; }
 
 .venue__name {
   font-family: var(--font-display);
@@ -473,13 +473,17 @@ a { color: var(--maroon); }
 .footer p { margin: .25rem 0; }
 .footer__fine { color: rgba(58, 42, 38, .7); font-size: .72rem; }
 
-/* --- painted flower, bleeding off the left edge --------------- */
-@media (min-width: 900px) {
-  .venue::before {
+/* --- painted flower, in the gutter beside the card ------------ */
+/* Only once the page is wide enough that it clears the card entirely. */
+@media (min-width: 1200px) {
+  #expositie {
+    position: relative;
+  }
+  #expositie::before {
     content: "";
     position: absolute;
-    left: calc((100vw - 100%) / -2 - 2rem);   /* always bleeds off the page edge */
-    bottom: -3rem;
+    left: calc((100vw - 100%) / -2 - 2rem);   /* bleeds off the page edge */
+    bottom: -2rem;
     width: 232px;
     height: 345px;
     background: url("../images/deco-flower.webp") center / contain no-repeat;
