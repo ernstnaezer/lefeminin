@@ -57,12 +57,13 @@ Vervang elke `href="#"` door de echte URL, bijvoorbeeld:
 - `href="https://www.instagram.com/lyakunst/"`
 
 Externe links openen in hetzelfde tabblad; wil je een nieuw tabblad, voeg dan
-`target="_blank" rel="noopener"` toe (zoals bij "Route plannen").
-Een knop die je niet nodig hebt: verwijder het hele `<a>…</a>` blok.
+`target="_blank" rel="noopener"` toe (zoals bij Fi en "Route plannen").
+Een knop die je niet nodig hebt: verwijder het hele `<a>…</a>` blok — zo
+heeft Fi alleen een websiteknop.
 
-De website van De Speciaalzaak (onder **Locatie**) is al ingevuld:
-<https://www.speciaalzaakvoorburg.nl>. Alleen de zes knoppen bij de
-kunstenaars staan nog op `href="#"`.
+Al ingevuld: Fi (<https://finaezer.nl/>) en De Speciaalzaak onder **Locatie**
+(<https://www.speciaalzaakvoorburg.nl>). Nog op `href="#"` staan de vier
+knoppen van Lya en Ilonka.
 
 ## Tekst of foto's wijzigen
 
