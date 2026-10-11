@@ -6,6 +6,10 @@
 :root {
   --cream: #FCECDD;
   --cream-light: #FFF7EE;
+  /* Vlak van de kaarten. Moet duidelijk lichter zijn dan --cream: een vleugje
+     verschil valt op een deel van de schermen gewoon weg. */
+  --panel: #FFFAF3;
+  --panel-edge: rgba(186, 121, 53, .45);
   --maroon: #660B1D;
   --maroon-soft: #7A2232;
   --teal: #244E4D;
@@ -185,8 +189,8 @@ a { color: var(--maroon); }
 }
 
 .artist {
-  background: rgba(255, 247, 238, .72);
-  border: 1px solid rgba(186, 121, 53, .35);
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
   border-radius: 4px;
   padding: .85rem .85rem 1.25rem;
   text-align: center;
@@ -289,15 +293,15 @@ a { color: var(--maroon); }
 .expo-card {
   max-width: 780px;
   margin-inline: auto;
-  background: rgba(255, 247, 238, .72);
-  border: 1px solid rgba(186, 121, 53, .35);
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
   border-radius: 4px;
   padding: clamp(.7rem, 2.6vw, 1.1rem);
-  box-shadow: 0 10px 28px rgba(102, 11, 29, .07);
+  box-shadow: 0 10px 28px rgba(102, 11, 29, .09);
 }
 
 .expo-card__inset {
-  border: 1px solid rgba(186, 121, 53, .3);
+  border: 1px solid rgba(186, 121, 53, .38);
   border-radius: 2px;
   padding: clamp(1.6rem, 6vw, 2.8rem) clamp(1.2rem, 5vw, 2.6rem);
   text-align: center;
