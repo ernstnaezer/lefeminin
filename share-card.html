@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>og</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  html, body { margin: 0; background: #888; }
+  .card {
+    zoom: 2;                 /* render at 2400x1260, downsample for crisp text */
+    width: 1200px; height: 630px; overflow: hidden; position: relative;
+    background: var(--cream);
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .card .hero { --dw: 640px; width: 100%; padding: 6.5rem 1rem 0; }
+  .card .hero__title { font-size: 7.6rem; }
+  .card .hero__swash { width: 470px; height: 22px; margin: .7rem auto 1.5rem; }
+  .card .hero__tagline { font-size: 1.15rem; }
+  .meta {
+    margin: auto 0 9.5rem;
+    font-family: var(--font-display);
+    color: var(--maroon);
+    font-size: 1.85rem;
+    letter-spacing: .03em;
+  }
+  .meta b { font-weight: 400; color: var(--teal); }
+  .meta i { font-style: normal; color: var(--gold); margin: 0 .55em; }
+  .card .wave { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; margin: 0; }
+</style>
+</head>
+<body>
+<div class="card">
+  <header class="hero">
+    <div class="hero__deco" aria-hidden="true">
+      <img class="deco deco--left" src="images/deco-hero-left.webp" alt="">
+      <img class="deco deco--right" src="images/deco-hero-right.webp" alt="">
+    </div>
+    <h1 class="hero__title">Le Féminin</h1>
+    <svg class="hero__swash" viewBox="0 0 400 26" aria-hidden="true" preserveAspectRatio="none">
+      <path d="M2 18 C 90 2, 310 2, 398 16 C 310 10, 90 10, 2 18 Z"/>
+    </svg>
+    <p class="hero__tagline"><span>Drie kunstenaars</span><span>Drie perspectieven</span><span>Één verhaal</span></p>
+  </header>
+  <p class="meta">17 oktober t/m 1 december 2026 <i>|</i> <b>De Speciaalzaak, Voorburg</b></p>
+  <img class="wave" src="images/deco-wave.webp" alt="">
+</div>
+</body>
+</html>

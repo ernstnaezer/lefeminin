@@ -9,6 +9,7 @@ upload de map en klaar.
 index.html              alle tekst + structuur
 css/style.css           opmaak (mobile first)
 favicon.svg             tabblad-icoon
+share-card.html         bron voor het deelplaatje (zie onder)
 images/
   deco-hero-left.webp   linkerhelft van het beschilderde kader rond de titel
   deco-hero-right.webp  rechterhelft; de twee sluiten naadloos op elkaar aan
@@ -19,6 +20,7 @@ images/
   werk-ilonka.jpg       schilderij Ilonka (uit de flyer)
   kunstenaars.jpg       groepsfoto (1600 px)
   kunstenaars-800.jpg   groepsfoto klein, voor mobiel
+  og-image.jpg          deelvoorbeeld 1200x630 (WhatsApp e.d.)
   flyer.jpg             de originele flyer (link in de footer)
 ```
 
@@ -74,6 +76,26 @@ Ilonka.
   desktop (346:565); `object-fit: cover` doet de rest, dus elk formaat werkt.
 - Kleuren staan bovenaan `css/style.css` in `:root` (maroon `#660B1D`,
   goud `#BA7935`, teal `#244E4D`, crème `#FCECDD` — overgenomen uit de flyer).
+
+## Deelvoorbeeld (WhatsApp, Facebook, LinkedIn)
+
+`images/og-image.jpg` (1200×630, ~105 kB) is het plaatje dat verschijnt als
+iemand <https://lefeminin.nl> deelt. Het staat in de `og:`-tags bovenaan
+`index.html`; die moeten **absolute** URL's bevatten, anders laat WhatsApp
+niets zien.
+
+Het plaatje is gemaakt met `share-card.html`: dat is dezelfde kop als op de
+site (zelfde CSS en decoraties) plus de datum- en locatieregel. Wijzigen gaat
+zo:
+
+1. Pas de tekst in `share-card.html` aan.
+2. Start de lokale server (zie *Publiceren*) en open
+   <http://127.0.0.1:8000/share-card.html>.
+3. Maak een schermafdruk van het blok `.card` en schaal die naar 1200×630;
+   bewaar als `images/og-image.jpg` (JPEG, kwaliteit ±88, blijf onder 300 kB).
+
+WhatsApp onthoudt een voorbeeld lang. Zie je na een wijziging nog het oude
+plaatje, deel de link dan één keer met `?v=2` erachter.
 
 ## Publiceren
 
