@@ -42,31 +42,25 @@ De titel is als HTML-tekst over het geschilderde kader gezet (de tekst uit de
 flyer is uit de afbeelding weggeretoucheerd), zodat hij scherp blijft en
 meeschaalt.
 
-## Links invullen
+## Links
 
-In `index.html` staat per kunstenaar een blokje:
+Alle knoppen wijzen naar een echte pagina:
 
-```html
-<div class="artist__links">
-  <a class="pill" href="#"> … Website</a>
-  <a class="pill" href="#"> … Instagram</a>
-</div>
-```
+| Waar | Knop | Adres |
+| --- | --- | --- |
+| Lya | Instagram | <https://www.instagram.com/lyaishaak/> |
+| Fi | Website | <https://finaezer.nl/> |
+| Ilonka | Website | <https://iloospaintings.nl> |
+| Lopende tentoonstellingen | Route plannen | Google Maps, Herenstraat 16 |
+| Lopende tentoonstellingen | De Speciaalzaak | <https://www.speciaalzaakvoorburg.nl> |
 
-Vervang elke `href="#"` door de echte URL, bijvoorbeeld:
+Een knop erbij? Kopieer een `<a class="pill">` blok binnen `artist__links` en
+wissel het icoon om: `#i-globe` voor een website, `#i-instagram` voor
+Instagram. Een knop weg? Verwijder het hele `<a>…</a>` blok — daarom heeft
+Lya alleen Instagram en hebben Fi en Ilonka alleen een website.
 
-- `href="https://www.lyakunst.nl"`
-- `href="https://www.instagram.com/lyakunst/"`
-
-Externe links openen in hetzelfde tabblad; wil je een nieuw tabblad, voeg dan
-`target="_blank" rel="noopener"` toe (zoals bij Fi en "Route plannen").
-Een knop die je niet nodig hebt: verwijder het hele `<a>…</a>` blok — zo
-heeft Fi alleen een websiteknop.
-
-Al ingevuld: Fi (<https://finaezer.nl/>) en De Speciaalzaak
-(<https://www.speciaalzaakvoorburg.nl>), in de kaart onder **Lopende
-tentoonstellingen**. Nog op `href="#"` staan de vier knoppen van Lya en
-Ilonka.
+Externe links staan op `target="_blank" rel="noopener"`, dus ze openen in een
+nieuw tabblad.
 
 ## Tekst of foto's wijzigen
 
