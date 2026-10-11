@@ -15,9 +15,9 @@ images/
   deco-hero-right.webp  rechterhelft; de twee sluiten naadloos op elkaar aan
   deco-flower.webp      bloem linksonder (alleen desktop, vanaf 900 px)
   deco-wave.webp        geschilderde rand onderaan de pagina
-  werk-lya.jpg          schilderij Lya (uit de flyer)
-  werk-fi.jpg           schilderij Fi (uit de flyer)
-  werk-ilonka.jpg       schilderij Ilonka (uit de flyer)
+  werk-lya.webp         foto van het doek van Lya (840x1120)
+  werk-fi.webp          foto van het doek van Fi (840x1120)
+  werk-ilonka.webp      foto van het doek van Ilonka (840x1120)
   kunstenaars.jpg       groepsfoto (1600 px)
   kunstenaars-800.jpg   groepsfoto klein, voor mobiel
   og-image.jpg          deelvoorbeeld 1200x630 (WhatsApp e.d.)
@@ -65,9 +65,10 @@ nieuw tabblad.
 ## Tekst of foto's wijzigen
 
 - Tekst: rechtstreeks in `index.html`.
-- Een schilderij vervangen: zet je eigen bestand in `images/` en pas de `src`
-  aan. De kaarten tonen liggende uitsnedes op mobiel (3:4) en staande op
-  desktop (346:565); `object-fit: cover` doet de rest, dus elk formaat werkt.
+- Een schilderij vervangen: zet je foto in `images/` en pas de `src` aan. De
+  kaarten tonen de doeken op 3:4; `object-fit: cover` snijdt een afwijkende
+  verhouding netjes bij, maar zelf op 3:4 bijsnijden geeft het mooiste
+  resultaat. 840x1120 is ruim genoeg, ook op een retinascherm.
 - Kleuren staan bovenaan `css/style.css` in `:root` (maroon `#660B1D`,
   goud `#BA7935`, teal `#244E4D`, crème `#FCECDD` — overgenomen uit de flyer).
 

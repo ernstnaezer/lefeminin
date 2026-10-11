@@ -195,15 +195,13 @@ a { color: var(--maroon); }
   box-shadow: 0 10px 28px rgba(102, 11, 29, .07);
 }
 
+/* De foto's van de doeken zijn op 3:4 bijgesneden; `cover` vangt op als er
+   later een werk met een andere verhouding voor in de plaats komt. */
 .artist__work {
   width: 100%;
-  aspect-ratio: 346 / 565;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 2px;
-}
-
-@media (max-width: 719px) {
-  .artist__work { aspect-ratio: 3 / 4; }
 }
 
 .artist__name {
